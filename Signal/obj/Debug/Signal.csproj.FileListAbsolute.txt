@@ -1,0 +1,6 @@
+c:\users\user\source\repos\SignalConsole\Signal\bin\Debug\Signal.dll
+c:\users\user\source\repos\SignalConsole\Signal\bin\Debug\Signal.pdb
+c:\users\user\source\repos\SignalConsole\Signal\obj\Debug\Signal.csprojResolveAssemblyReference.cache
+c:\users\user\source\repos\SignalConsole\Signal\obj\Debug\Signal.csproj.CoreCompileInputs.cache
+c:\users\user\source\repos\SignalConsole\Signal\obj\Debug\Signal.dll
+c:\users\user\source\repos\SignalConsole\Signal\obj\Debug\Signal.pdb

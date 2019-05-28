@@ -15,8 +15,8 @@ namespace SignalTests
 
             var signalFake = new SignalMock(() => testString = controlString, new LaunchTimeStub());
 
-            Assert.AreEqual(testString, controlString);        
-        }       
+            Assert.AreEqual(testString, controlString);
+        }
 
         [Test]
         public void Signal_OnSettingNullAction_ThrowsException()
@@ -36,7 +36,7 @@ namespace SignalTests
         [Test]
         public void Signal_OnSettingEmptyLaunchTimeCollection_ThrowsException()
         {
-            var exception = Assert.Catch<Exception>(() => new Signal.Signal(() => Console.WriteLine(), new ILaunchTime[] { } ));
+            var exception = Assert.Catch<Exception>(() => new Signal.Signal(() => Console.WriteLine(), new ILaunchTime[] { }));
             StringAssert.Contains("Collection of launch times could not be empty", exception.Message);
         }
 
@@ -53,5 +53,29 @@ namespace SignalTests
             var exception = Assert.Catch<Exception>(() => new Notification(null, new LaunchTimeStub()));
             StringAssert.Contains("Notification message could not be set as null value", exception.Message);
         }
-    }
+
+        [Test]
+        public void LaunchTime_OnSettingOutOfRangeHour_ThrowsException()
+        {
+            var exception = Assert.Catch<Exception>(() => new LaunchTime(25, 00));
+            StringAssert.Contains("Launch hour should be an integer value from 0 to 23", exception.Message);
+
+        }
+
+        [Test]
+        public void LaunchTime_OnSettingOutOfRangeMinute_ThrowsException()
+        {
+            var exception = Assert.Catch<Exception>(() => new LaunchTime(02, 75));
+            StringAssert.Contains("Launch minute should be an integer value from 0 to 59", exception.Message);
+        }
+
+
+        [Test]
+        public void LaunchTime_OnSettingOutOfRangeScond_ThrowsException()
+        {
+            var exception = Assert.Catch<Exception>(() => new LaunchTime(02, 50, 80));
+            StringAssert.Contains("Launch second should be an integer value from 0 to 59", exception.Message);
+
+        }
+    }    
 }

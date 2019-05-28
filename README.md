@@ -6,4 +6,4 @@ according to a schedule.
 The core of the system is represented by System.Timers.Timer instance which starts every second and appeals to the schedule of the class.
 The schedule itself is a collection of LaunchTime class instances, each of which is being called in order to
 check whether current time is an appropriate moment to call the Action by comparison current time's hour, minute and second values 
-with corresponding properties from a LaunchTime class instance.
+with corresponding properties from the LaunchTime class instance.

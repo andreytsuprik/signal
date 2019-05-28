@@ -10,9 +10,9 @@ namespace Signal
         private static readonly int millisecondsInSecond = 1000;        
 
         private Timer systemTimer;
+        private Action actionToPerformAtLaunchTime;
         private ICollection<ILaunchTime> launchTimes;
-
-        protected Action actionToPerformAtLaunchTime;
+        
 
         public virtual Action ActionToPerformAtLaunchTime
         {

@@ -27,14 +27,14 @@ namespace SignalTests
         }
 
         [Test]
-        public void Signal_OnSettingNullLaunchTimeStubCollection_ThrowsException()
+        public void Signal_OnSettingNullLaunchTimeCollection_ThrowsException()
         {
             var exception = Assert.Catch<Exception>(() => new Signal.Signal(() => Console.WriteLine(), null));
             StringAssert.Contains("Collection of launch times could not be set as null", exception.Message);
         }
 
         [Test]
-        public void Signal_OnSettingEmptyLaunchTimeStubCollection_ThrowsException()
+        public void Signal_OnSettingEmptyLaunchTimeCollection_ThrowsException()
         {
             var exception = Assert.Catch<Exception>(() => new Signal.Signal(() => Console.WriteLine(), new ILaunchTime[] { } ));
             StringAssert.Contains("Collection of launch times could not be empty", exception.Message);

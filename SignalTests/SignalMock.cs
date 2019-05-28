@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Signal;
 
 namespace SignalTests
@@ -54,7 +51,7 @@ namespace SignalTests
             LaunchTimes = launchTimes;
 
             PerformAction();
-        }        
+        }           
 
         private void PerformAction()
         {

@@ -4,7 +4,7 @@ using System.Timers;
 
 namespace Signal
 {
-    public class Signal : ISignal
+    public class Signal : ISignal, IDisposable
     {
         private static readonly int launchTimeCheckingIntervalInSeconds = 1;
         private static readonly int millisecondsInSecond = 1000;        
@@ -18,12 +18,17 @@ namespace Signal
         {
             get
             {
+                if(actionToPerformAtLaunchTime == null)
+                {
+                    throw new Exception("Action to perform at launch time is null");
+                }
+
                 return actionToPerformAtLaunchTime;
             }
 
-            private set
+            protected set
             {
-                actionToPerformAtLaunchTime = value ?? throw new Exception("Action to perform at launch time could not be set as a null value");
+                actionToPerformAtLaunchTime = value ?? throw new Exception("Action to perform at launch time could not be set as null");
             }
         }
 
@@ -38,7 +43,7 @@ namespace Signal
             {
                 if (value == null)
                 {
-                    throw new Exception("Collection of launch times could not be set as a null value");
+                    throw new Exception("Collection of launch times could not be set as null");
                 }
 
                 if (value.Count == 0)
@@ -56,7 +61,13 @@ namespace Signal
             {
                 return launchTimeCheckingIntervalInSeconds * millisecondsInSecond;
             }
-        }        
+        }
+
+        public Signal(params ILaunchTime[] launchTimes)
+        {            
+            LaunchTimes = launchTimes;
+            InitializeSystemTimer();
+        }
 
         public Signal(Action actionToPerformAtLaunchTime, params ILaunchTime[] launchTimes)
         {

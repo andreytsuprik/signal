@@ -8,3 +8,13 @@ c:\users\user\source\repos\SignalConsole\SignalConsole\obj\Debug\SignalConsole.c
 c:\users\user\source\repos\SignalConsole\SignalConsole\obj\Debug\SignalConsole.csproj.CopyComplete
 c:\users\user\source\repos\SignalConsole\SignalConsole\obj\Debug\SignalConsole.exe
 c:\users\user\source\repos\SignalConsole\SignalConsole\obj\Debug\SignalConsole.pdb
+d:\Documents\Education\C#\SignalConsole\SignalConsole\bin\Debug\SignalConsole.exe.config
+d:\Documents\Education\C#\SignalConsole\SignalConsole\bin\Debug\SignalConsole.exe
+d:\Documents\Education\C#\SignalConsole\SignalConsole\bin\Debug\SignalConsole.pdb
+d:\Documents\Education\C#\SignalConsole\SignalConsole\bin\Debug\Signal.dll
+d:\Documents\Education\C#\SignalConsole\SignalConsole\bin\Debug\Signal.pdb
+d:\Documents\Education\C#\SignalConsole\SignalConsole\obj\Debug\SignalConsole.csprojResolveAssemblyReference.cache
+d:\Documents\Education\C#\SignalConsole\SignalConsole\obj\Debug\SignalConsole.csproj.CoreCompileInputs.cache
+d:\Documents\Education\C#\SignalConsole\SignalConsole\obj\Debug\SignalConsole.csproj.CopyComplete
+d:\Documents\Education\C#\SignalConsole\SignalConsole\obj\Debug\SignalConsole.exe
+d:\Documents\Education\C#\SignalConsole\SignalConsole\obj\Debug\SignalConsole.pdb

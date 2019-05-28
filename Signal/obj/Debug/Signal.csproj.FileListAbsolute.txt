@@ -4,3 +4,9 @@ c:\users\user\source\repos\SignalConsole\Signal\obj\Debug\Signal.csprojResolveAs
 c:\users\user\source\repos\SignalConsole\Signal\obj\Debug\Signal.csproj.CoreCompileInputs.cache
 c:\users\user\source\repos\SignalConsole\Signal\obj\Debug\Signal.dll
 c:\users\user\source\repos\SignalConsole\Signal\obj\Debug\Signal.pdb
+d:\Documents\Education\C#\SignalConsole\Signal\bin\Debug\Signal.dll
+d:\Documents\Education\C#\SignalConsole\Signal\bin\Debug\Signal.pdb
+d:\Documents\Education\C#\SignalConsole\Signal\obj\Debug\Signal.csprojResolveAssemblyReference.cache
+d:\Documents\Education\C#\SignalConsole\Signal\obj\Debug\Signal.csproj.CoreCompileInputs.cache
+d:\Documents\Education\C#\SignalConsole\Signal\obj\Debug\Signal.dll
+d:\Documents\Education\C#\SignalConsole\Signal\obj\Debug\Signal.pdb

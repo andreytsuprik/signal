@@ -7,23 +7,24 @@ namespace SignalConsole
     {
         static void Main(string[] args)
         {
-            ISignal simpleSignal = null;
-            ISignal alarmClock = null;
-            ISignal notificationAboutGarbage = null;
-            ISignal notificationsAboutCat = null;
+            Signal.Signal simpleSignal = null;
+            Signal.Signal alarmClock = null;
+            Signal.Signal notificationAboutGarbage = null;
+            Signal.Signal notificationsAboutCat = null;
 
             try
             {                
-                simpleSignal = new Signal.Signal(() => Console.WriteLine("Some signal"), new LaunchTime(13, 30, 30));
-                alarmClock = new AlarmClock(new LaunchTime(13, 32));
-                notificationAboutGarbage = new Notification("Don't forget to throw the garbage away!", new LaunchTime(13, 31));
-                notificationsAboutCat = new Notification("Don't forget to feed your cat!", new LaunchTime(13, 31), new LaunchTime(13, 32), new LaunchTime(13, 33));
+                simpleSignal = new Signal.Signal(() => Console.WriteLine("Some signal"), new LaunchTime(14, 04, 05));
+                alarmClock = new AlarmClock(new LaunchTime(07, 00));
+                notificationAboutGarbage = new Notification("Don't forget to throw the garbage away!", new LaunchTime(08, 00));
+                notificationsAboutCat = new Notification("Don't forget to feed your cat!", new LaunchTime(07, 30), new LaunchTime(13, 30), new LaunchTime(19, 30));
 
-                Console.ReadLine();               
+                Console.ReadLine();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
+                Console.ReadLine();
             }
             finally
             {
@@ -31,7 +32,7 @@ namespace SignalConsole
                 alarmClock.Dispose();
                 notificationAboutGarbage.Dispose();
                 notificationsAboutCat.Dispose();
-            }
+            }            
         }
     }
 }

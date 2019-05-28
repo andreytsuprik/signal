@@ -21,15 +21,16 @@ namespace SignalTests
         [Test]
         public void Signal_OnSettingNullAction_ThrowsException()
         {
-            var exception = Assert.Catch<Exception>(() => new Signal.Signal(null, new LaunchTimeStub()));
-            StringAssert.Contains("Action to perform at launch time could not be set as a null value", exception.Message);
+            Action testAction = null;
+            var exception = Assert.Catch<Exception>(() => new Signal.Signal(testAction, new LaunchTimeStub()));
+            StringAssert.Contains("Action to perform at launch time could not be set as null", exception.Message);
         }
 
         [Test]
         public void Signal_OnSettingNullLaunchTimeStubCollection_ThrowsException()
         {
             var exception = Assert.Catch<Exception>(() => new Signal.Signal(() => Console.WriteLine(), null));
-            StringAssert.Contains("Collection of launch times could not be set as a null value", exception.Message);
+            StringAssert.Contains("Collection of launch times could not be set as null", exception.Message);
         }
 
         [Test]
@@ -37,6 +38,20 @@ namespace SignalTests
         {
             var exception = Assert.Catch<Exception>(() => new Signal.Signal(() => Console.WriteLine(), new ILaunchTime[] { } ));
             StringAssert.Contains("Collection of launch times could not be empty", exception.Message);
+        }
+
+        [Test]
+        public void Notification_OnSettingEmptyNotificationMessage_ThrowsException()
+        {
+            var exception = Assert.Catch<Exception>(() => new Notification(String.Empty, new LaunchTimeStub()));
+            StringAssert.Contains("Notification message could not be set as an empty string", exception.Message);
+        }
+
+        [Test]
+        public void Notification_OnSettingNullNotificationMessage_ThrowsException()
+        {
+            var exception = Assert.Catch<Exception>(() => new Notification(null, new LaunchTimeStub()));
+            StringAssert.Contains("Notification message could not be set as null value", exception.Message);
         }
     }
 }

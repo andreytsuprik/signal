@@ -59,7 +59,6 @@ namespace SignalTests
         {
             var exception = Assert.Catch<Exception>(() => new LaunchTime(25, 00));
             StringAssert.Contains("Launch hour should be an integer value from 0 to 23", exception.Message);
-
         }
 
         [Test]
@@ -69,13 +68,11 @@ namespace SignalTests
             StringAssert.Contains("Launch minute should be an integer value from 0 to 59", exception.Message);
         }
 
-
         [Test]
         public void LaunchTime_OnSettingOutOfRangeScond_ThrowsException()
         {
             var exception = Assert.Catch<Exception>(() => new LaunchTime(02, 50, 80));
             StringAssert.Contains("Launch second should be an integer value from 0 to 59", exception.Message);
-
         }
     }    
 }

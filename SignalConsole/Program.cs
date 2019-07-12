@@ -28,10 +28,25 @@ namespace SignalConsole
             }
             finally
             {
-                simpleSignal.Dispose();
-                alarmClock.Dispose();
-                notificationAboutGarbage.Dispose();
-                notificationsAboutCat.Dispose();
+                if (simpleSignal != null)
+                {
+                    simpleSignal.Dispose();
+                }
+
+                if (alarmClock != null)
+                {
+                    alarmClock.Dispose();
+                }
+
+                if (notificationAboutGarbage != null)
+                {
+                    notificationAboutGarbage.Dispose();
+                }
+
+                if (notificationsAboutCat != null)
+                {
+                    notificationsAboutCat.Dispose();
+                }
             }            
         }
     }
